@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>关系四变量测评</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">4V</span>
+        <span>关系四变量测评</span>
+      </div>
+      <button class="ghost-button" id="resetButton" type="button">重新测评</button>
+    </header>
+
+    <main>
+      <section class="hero" id="intro">
+        <div class="hero-copy">
+          <p class="eyebrow">不劝分，不鸡汤</p>
+          <h1>用 4 个结构变量，看清一段关系是不是正在消耗你。</h1>
+          <p class="lede">
+            这份测评不替你做决定，只帮你观察关系里的节奏、投入、边界和位置。
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button" id="startButton" type="button">开始测评</button>
+            <a class="text-link" href="#assessment">查看题目</a>
+          </div>
+        </div>
+        <div class="signal-panel" aria-label="四变量说明">
+          <div>
+            <strong>节奏</strong>
+            <span>关系是否长期稳定</span>
+          </div>
+          <div>
+            <strong>投入</strong>
+            <span>关系成本是否对等</span>
+          </div>
+          <div>
+            <strong>边界</strong>
+            <span>你是否正在后退</span>
+          </div>
+          <div>
+            <strong>位置</strong>
+            <span>主动权是否还在你手里</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="assessment" id="assessment">
+        <div class="section-heading">
+          <p class="eyebrow">40 道结构化问题</p>
+          <h2>请选择最接近你真实状态的选项</h2>
+          <p>0 分代表几乎没有，3 分代表长期明显存在。分数越高，代表该变量的风险信号越明显。</p>
+        </div>
+        <form id="quizForm" class="quiz-form"></form>
+        <div class="sticky-submit">
+          <div>
+            <strong id="progressText">已完成 0 / 40</strong>
+            <span>答完后生成结构结果</span>
+          </div>
+          <button class="primary-button" id="submitButton" type="submit" form="quizForm" disabled>
+            查看结果
+          </button>
+        </div>
+      </section>
+
+      <section class="results" id="results" hidden>
+        <div class="section-heading">
+          <p class="eyebrow">测评结果</p>
+          <h2 id="resultTitle">你的关系结构结果</h2>
+          <p id="resultSubtitle"></p>
+        </div>
+
+        <div class="result-layout">
+          <div class="score-card">
+            <div class="total-score">
+              <span>总分</span>
+              <strong id="totalScore">0</strong>
+              <small>/ 120</small>
+            </div>
+            <div class="status-pill" id="statusPill"></div>
+            <div class="bars" id="bars"></div>
+          </div>
+
+          <div class="interpretation">
+            <h3>结构解释</h3>
+            <p id="interpretationText"></p>
+            <h3>接下来观察 3 件事</h3>
+            <ul id="adviceList"></ul>
+          </div>
+        </div>
+
+        <div class="conversion-band">
+          <div>
+            <p class="eyebrow">完整解读</p>
+            <h2>想继续拆这段关系，可以用结果做一次复盘。</h2>
+            <p>保存四变量得分、主要失衡变量和你的 3 个观察点，后续可以承接电子手册或一对一结构分析。</p>
+          </div>
+          <button class="secondary-button" id="copyResultButton" type="button">复制结果摘要</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>关系四变量测评只用于自我观察。若关系中存在暴力、威胁、跟踪、严重控制或财务胁迫，请优先寻求现实支持和专业帮助。</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
